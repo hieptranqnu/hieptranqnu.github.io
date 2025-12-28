@@ -1,0 +1,1232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="Hiep Tran — Fullstack / Mobile Engineer (Spring Boot, Laravel, Node/NestJS; iOS Swift; React Native; Vue/React)." />
+
+    <!-- ✅ Green primary tone -->
+    <meta name="theme-color" content="#16a34a" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hiep Tran — Portfolio" />
+    <meta property="og:description"
+        content="Fullstack / Mobile Engineer — Backend (Spring Boot, Laravel, Node/NestJS) • iOS (Swift) • React Native • Vue/React" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:image" content="og.png" /> -->
+
+    <title>Hiep Tran — Portfolio</title>
+
+    <style>
+        :root {
+            --bg: #0b1020;
+            --card: rgba(255, 255, 255, .06);
+            --card2: rgba(255, 255, 255, .08);
+            --text: rgba(255, 255, 255, .92);
+            --muted: rgba(255, 255, 255, .70);
+            --muted2: rgba(255, 255, 255, .55);
+            --line: rgba(255, 255, 255, .10);
+            --shadow: 0 20px 60px rgba(0, 0, 0, .35);
+            --radius: 18px;
+            --max: 1100px;
+            --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+
+            /* ✅ Accent (Green) */
+            --accent: #22c55e;
+            /* green-500 */
+            --accent2: #16a34a;
+            /* green-600 */
+            --accentSoft: rgba(34, 197, 94, .25);
+            --accentSoft2: rgba(22, 163, 74, .18);
+            --accentOutline: rgba(34, 197, 94, .45);
+        }
+
+        [data-theme="light"] {
+            --bg: #ffffff;
+            --card: rgba(17, 24, 39, .04);
+            --card2: rgba(17, 24, 39, .06);
+            --text: #1a1a2e;
+            --muted: #4a4a5a;
+            --muted2: #6a6a7a;
+            --line: rgba(17, 24, 39, .12);
+            --shadow: 0 18px 50px rgba(17, 24, 39, .08);
+            --accentSoft: transparent;
+            --accentSoft2: transparent;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--sans);
+            background:
+                radial-gradient(1200px 800px at 10% 10%, var(--accentSoft), transparent 60%),
+                radial-gradient(1200px 800px at 90% 20%, var(--accentSoft2), transparent 60%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 28px 18px 70px;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: blur(10px);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, .35), transparent);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .topbar .inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            min-width: 220px;
+        }
+
+        .logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background:
+                radial-gradient(12px 12px at 30% 30%, rgba(255, 255, 255, .45), transparent 60%),
+                linear-gradient(135deg, var(--accent), var(--accent2));
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, .18);
+        }
+
+        .brand b {
+            letter-spacing: .2px
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .nav a {
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 10px;
+            color: var(--muted);
+            border: 1px solid transparent;
+        }
+
+        .nav a:hover {
+            color: var(--text);
+            border-color: var(--line);
+            background: var(--card);
+        }
+
+        .btn {
+            border: 1px solid var(--line);
+            background: var(--card);
+            color: var(--text);
+            padding: 9px 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            text-decoration: none;
+            user-select: none;
+        }
+
+        .btn:hover {
+            background: var(--card2)
+        }
+
+        .btn.primary {
+            border-color: var(--accentOutline);
+            background: linear-gradient(135deg, rgba(34, 197, 94, .26), rgba(22, 163, 74, .14));
+        }
+
+        .btn small {
+            color: var(--muted2)
+        }
+
+        .btn-group {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center
+        }
+
+        .btn.active {
+            outline: 2px solid var(--accentOutline)
+        }
+
+        .btn.icon {
+            padding: 9px 10px
+        }
+
+        .hero {
+            padding: 28px 0 10px;
+            display: grid;
+            grid-template-columns: 1.4fr .9fr;
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .hero .left {
+            padding: 26px 22px
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.15;
+            letter-spacing: -.4px;
+        }
+
+        .hero p {
+            margin: 0 0 14px;
+            color: var(--muted)
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .02);
+            color: var(--muted);
+            font-family: var(--mono);
+            font-size: 12.5px;
+        }
+
+        .hero .right {
+            padding: 18px
+        }
+
+        .mini {
+            padding: 14px 14px 12px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid var(--line);
+            margin-bottom: 12px;
+        }
+
+        .mini h3 {
+            margin: 0 0 6px;
+            font-size: 14px;
+            color: var(--muted)
+        }
+
+        .mini .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: flex-start
+        }
+
+        .mini a {
+            color: var(--text);
+            text-decoration: none
+        }
+
+        .mini a:hover {
+            text-decoration: underline
+        }
+
+        .mini code {
+            font-family: var(--mono);
+            color: var(--muted)
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px
+        }
+
+        .notice {
+            margin-top: 12px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .03);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        section {
+            margin-top: 18px
+        }
+
+        .section-title {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 22px 0 10px;
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: 18px;
+            letter-spacing: .2px;
+        }
+
+        .section-title span {
+            color: var(--muted2);
+            font-size: 13px
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .pad {
+            padding: 18px
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px
+        }
+
+        .tag {
+            font-size: 13px;
+            color: var(--muted);
+            padding: 7px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .02);
+        }
+
+        .timeline {
+            display: grid;
+            gap: 10px;
+        }
+
+        .item {
+            padding: 16px;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .02);
+        }
+
+        .item .top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+
+        .item b {
+            font-size: 15px
+        }
+
+        .item em {
+            font-style: normal;
+            color: var(--muted2);
+            font-size: 13px
+        }
+
+        .item ul {
+            margin: 8px 0 0;
+            padding-left: 18px;
+            color: var(--muted)
+        }
+
+        .item li {
+            margin: 4px 0
+        }
+
+        .selected {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+        }
+
+        .selected .label {
+            font-size: 12.5px;
+            color: var(--muted2);
+            font-family: var(--mono);
+            margin-bottom: 6px;
+        }
+
+        .slinks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .slinks a {
+            text-decoration: none;
+            font-size: 13px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .02);
+            color: var(--muted);
+        }
+
+        .slinks a:hover {
+            color: var(--text);
+            background: var(--card2);
+        }
+
+        .projects {
+            display: grid;
+            gap: 14px;
+        }
+
+        details.proj {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--card);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        details.proj summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        details.proj summary::-webkit-details-marker {
+            display: none
+        }
+
+        .sum-left {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .pill {
+            font-family: var(--mono);
+            font-size: 12px;
+            color: rgba(255, 255, 255, .90);
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(34, 197, 94, .70), rgba(22, 163, 74, .55));
+            border: 1px solid rgba(255, 255, 255, .18);
+            white-space: nowrap;
+        }
+
+        [data-theme="light"] .pill {
+            color: rgba(17, 24, 39, .92)
+        }
+
+        .caret {
+            color: var(--muted2);
+            font-family: var(--mono)
+        }
+
+        .proj .content {
+            padding: 0 18px 18px;
+            color: var(--muted);
+        }
+
+        .company-note {
+            margin: 0 0 10px;
+            color: var(--muted2);
+            font-size: 13px
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .p-card {
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .02);
+            border-radius: 16px;
+            padding: 14px;
+            scroll-margin-top: 90px;
+        }
+
+        .p-card .name {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 10px
+        }
+
+        .p-card b {
+            font-size: 14px
+        }
+
+        .stack {
+            color: var(--muted2);
+            font-size: 12.5px;
+            font-family: var(--mono)
+        }
+
+        .p-card ul {
+            margin: 8px 0 0;
+            padding-left: 18px
+        }
+
+        .p-card li {
+            margin: 4px 0
+        }
+
+        .footer {
+            margin-top: 18px;
+            padding: 18px;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: linear-gradient(135deg, rgba(34, 197, 94, .18), rgba(22, 163, 74, .10));
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer p {
+            margin: 0;
+            color: var(--muted)
+        }
+
+        .kicker {
+            color: var(--muted2);
+            font-size: 13px
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--line);
+            margin: 18px 0;
+            border: 0;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr
+            }
+
+            .cards {
+                grid-template-columns: 1fr
+            }
+
+            .brand {
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+
+<body data-theme="dark">
+    <header class="topbar">
+        <div class="inner">
+            <a class="brand" href="#top" aria-label="Go to top">
+                <div class="logo" aria-hidden="true"></div>
+                <div>
+                    <b id="brandName">Hiệp Trần</b><br />
+                    <span class="kicker" data-i18n="role">Fullstack / Mobile Engineer</span>
+                </div>
+            </a>
+
+            <nav class="nav" aria-label="Primary navigation">
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#skills" data-i18n="nav.skills">Skills</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+
+                <span class="btn-group" aria-label="Language switch">
+                    <button class="btn" id="viBtn" type="button">VI</button>
+                    <button class="btn" id="enBtn" type="button">EN</button>
+                </span>
+
+                <button class="btn icon" id="themeBtn" type="button" aria-label="Toggle theme">🌓</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap" id="top">
+        <section class="hero">
+            <div class="card left">
+                <h1 data-i18n="hero.title">Hi, I’m <span style="color:rgba(34,197,94,.95)">Hiệp</span> 👋</h1>
+                <p data-i18n="hero.desc">
+                    I have <b>7+ years of experience</b> building <b>Backend</b> systems (Java Spring Boot, Laravel,
+                    Node.js/NestJS)
+                    and <b>Mobile</b> apps (iOS Swift, React Native). I focus on API design, workflow optimization,
+                    service integrations (Firebase/OneSignal), and shipping reliably with Scrum/Agile.
+                </p>
+
+                <div class="meta">
+                    <span class="chip" id="chipLocation">📍 Quy Nhơn, Gia Lai</span>
+                    <span class="chip" data-i18n="hero.chip1">🧩 Backend • iOS • React Native</span>
+                    <span class="chip" data-i18n="hero.chip2">⚙️ Spring Boot • NestJS • Swift</span>
+                </div>
+
+                <div class="actions">
+                    <a class="btn primary" href="#experience" data-i18n="hero.ctaProjects">View projects</a>
+                    <a class="btn" href="mailto:hieptranqnu@gmail.com" data-i18n="hero.ctaEmail">Email</a>
+                    <a class="btn" href="https://linkedin.com/in/hieptranqnu" target="_blank"
+                        rel="noreferrer">LinkedIn</a>
+                </div>
+            </div>
+
+            <aside class="card right" aria-label="Quick info">
+                <div class="mini">
+                    <h3 data-i18n="quick.contact">Contact</h3>
+                    <div class="row"><span>📞</span><a href="tel:0348544715">0348544715</a></div>
+                    <div class="row"><span>✉️</span><a href="mailto:hieptranqnu@gmail.com">hieptranqnu@gmail.com</a>
+                    </div>
+                    <div class="row"><span>🔗</span><a href="https://linkedin.com/in/hieptranqnu" target="_blank"
+                            rel="noreferrer">linkedin.com/in/hieptranqnu</a></div>
+                </div>
+
+                <div class="mini">
+                    <h3 data-i18n="quick.stack">Primary stack</h3>
+                    <div class="row"><span
+                            data-i18n="quick.backend">Backend</span><code>Spring Boot • Laravel • Node/Nest</code></div>
+                    <div class="row"><span data-i18n="quick.mobile">Mobile</span><code>Swift • React Native</code></div>
+                    <div class="row"><span>Web</span><code>VueJS • ReactJS • NextJS</code></div>
+                </div>
+
+                <div class="mini">
+                    <h3 data-i18n="quick.tools">Database & Tools</h3>
+                    <div class="row"><span>DB</span><code>PostgreSQL • MongoDB</code></div>
+                    <div class="row"><span>Tools</span><code>Git • Jira • Trello</code></div>
+                    <div class="row"><span>Services</span><code>Firebase • OneSignal</code></div>
+                </div>
+            </aside>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="about">
+            <div class="section-title">
+                <h2 data-i18n="about.title">About</h2>
+                <span data-i18n="about.sub">Practical • product-minded • quality-focused</span>
+            </div>
+
+            <div class="grid-2">
+                <div class="card pad">
+                    <p style="margin:0;color:var(--muted)" data-i18n="about.p1">
+                        I work across <b>Backend</b> and <b>Mobile</b>, comfortable collaborating with PO/clients,
+                        breaking problems into clear modules, delivering in sprints, and maintaining quality via code
+                        reviews and Git
+                        flow.
+                        My strengths are shipping stable products and optimizing user experience (especially on iOS).
+                    </p>
+                </div>
+
+                <div class="card pad">
+                    <p style="margin:0;color:var(--muted)" data-i18n="about.p2">
+                        I fit well in teams that need to accelerate feature delivery, optimize systems,
+                        or want an engineer who can cover work from APIs to client apps.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-title">
+                <h2 data-i18n="skills.title">Skills</h2>
+                <span data-i18n="skills.sub">Core stack & tools I use frequently</span>
+            </div>
+
+            <div class="card pad">
+                <div class="tags" id="skillsTags"></div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-title">
+                <h2 data-i18n="exp.title">Experience</h2>
+                <span data-i18n="exp.sub">Timeline and featured projects</span>
+            </div>
+
+            <div class="card pad">
+                <div class="timeline" id="timeline"></div>
+            </div>
+
+            <div class="section-title" style="margin-top: 28px;">
+                <h2 data-i18n="proj.title">Featured Projects</h2>
+                <span data-i18n="proj.sub">A selection of projects I've worked on</span>
+            </div>
+
+            <div class="card pad">
+                <div class="cards">
+                    <div class="p-card">
+                        <div class="name">
+                            <b>AscendX SDK</b>
+                            <span class="stack" data-i18n="stack.swift">iOS (Swift)</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="p.ascendx.1">Custom ads bidding system based on Prebid open-source.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-card">
+                        <div class="name">
+                            <b>VPN</b>
+                            <span class="stack" data-i18n="stack.swift">iOS (Swift)</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="p.vpn.1">Custom VPN system based on WireGuard open-source.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-card">
+                        <div class="name">
+                            <b>ShiftBox</b>
+                            <span class="stack" data-i18n="stack.node_vue">Backend (NodeJS) • Web (VueJS)</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="p.shiftbox.1">Class schedule and lesson/assignment management.</li>
+                            <li data-i18n="p.shiftbox.2">Server deployment and maintenance.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-card">
+                        <div class="name">
+                            <b>KOL</b>
+                            <span class="stack" data-i18n="stack.nest">Backend (NestJS)</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="p.kol.1">KOL profile and booking management.</li>
+                            <li data-i18n="p.kol.2">Server deployment and maintenance.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-card">
+                        <div class="name">
+                            <b>EduTech</b>
+                            <span class="stack" data-i18n="stack.nest_react">Backend (NestJS) • Web (ReactJS)</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="p.edutech.1">Payment gateway integration for online tuition payments.</li>
+                            <li data-i18n="p.edutech.2">Server deployment and maintenance.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-card">
+                        <div class="name">
+                            <b>Miguards</b>
+                            <span class="stack" data-i18n="stack.rn">Mobile (React Native)</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="p.miguards.1">Scheduling, monitoring, and attendance for security guards.
+                            </li>
+                            <li data-i18n="p.miguards.2">Integrated notifications (OneSignal).</li>
+                            <li data-i18n="p.miguards.3">Published to App Store & Play Store.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-card">
+                        <div class="name">
+                            <b>Shinhan Finance</b>
+                            <span class="stack" data-i18n="stack.sb_swift">Backend (Spring Boot) • iOS (Swift)</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="p.shinhan.1">View loan list and repayment due dates.</li>
+                            <li data-i18n="p.shinhan.2">Due-date reminders.</li>
+                            <li data-i18n="p.shinhan.3">Server deployment and maintenance.</li>
+                            <li data-i18n="p.shinhan.4">Published to App Store.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-card">
+                        <div class="name">
+                            <b>TMS (BMT)</b>
+                            <span class="stack" data-i18n="stack.sb_swift">Backend (Spring Boot) • iOS (Swift)</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="p.tms.1">Transport schedule assignment management.</li>
+                            <li data-i18n="p.tms.2">Trip/route documents, locations, and timing management.</li>
+                            <li data-i18n="p.tms.3">Server deployment and maintenance.</li>
+                            <li data-i18n="p.tms.4">Published to App Store.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-card">
+                        <div class="name">
+                            <b>Food Home Made</b>
+                            <span class="stack" data-i18n="stack.laravel_swift">Backend (Laravel) • iOS (Swift)</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="p.food.1">Post dishes and search nearby items by location.</li>
+                            <li data-i18n="p.food.2">Server deployment and maintenance.</li>
+                            <li data-i18n="p.food.3">Published to App Store.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-card">
+                        <div class="name">
+                            <b>CyrusPay</b>
+                            <span class="stack" data-i18n="stack.vue">Web (VueJS)</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="p.cyruspay.1">Supports management and Australian tax calculations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-title">
+                <h2 data-i18n="contact.title">Contact</h2>
+                <span data-i18n="contact.sub">Open to contract / full-time</span>
+            </div>
+
+            <div class="footer">
+                <div>
+                    <p data-i18n="contact.p"><b>Let’s work together?</b> I’m happy to chat if you need an engineer who
+                        can cover
+                        Backend + Mobile.</p>
+                    <p class="kicker">
+                        <span data-i18n="contact.email">Email</span>:
+                        <a href="mailto:hieptranqnu@gmail.com">hieptranqnu@gmail.com</a>
+                        •
+                        <span data-i18n="contact.phone">Phone</span>:
+                        <a href="tel:0348544715">0348544715</a>
+                    </p>
+                </div>
+                <div class="actions" style="margin:0">
+                    <a class="btn primary" href="mailto:hieptranqnu@gmail.com?subject=Collaboration%20Opportunity"
+                        data-i18n="contact.ctaMail">Send email</a>
+                    <a class="btn" href="https://linkedin.com/in/hieptranqnu" target="_blank"
+                        rel="noreferrer">LinkedIn</a>
+                    <a class="btn" href="#top" data-i18n="contact.ctaTop">Back to top ↑</a>
+                </div>
+            </div>
+
+            <p class="kicker" style="margin-top:12px">
+                © <span id="year"></span> <span id="footerName">Hiệp Trần</span> • Built for GitHub Pages
+            </p>
+        </section>
+    </main>
+
+    <script>
+        // ---------- Theme ----------
+        const root = document.body;
+        const themeBtn = document.getElementById("themeBtn");
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light" || savedTheme === "dark") root.setAttribute("data-theme", savedTheme);
+
+        themeBtn.addEventListener("click", () => {
+            const cur = root.getAttribute("data-theme") || "dark";
+            const next = cur === "dark" ? "light" : "dark";
+            root.setAttribute("data-theme", next);
+            localStorage.setItem("theme", next);
+        });
+
+        // ---------- Year ----------
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // ---------- i18n ----------
+        const i18n = {
+            vi: {
+                role: "Fullstack / Mobile Engineer",
+                nav: { about: "Giới thiệu", skills: "Kỹ năng", experience: "Kinh nghiệm", contact: "Liên hệ" },
+                hero: {
+                    title: 'Xin chào, mình là <span style="color:rgba(34,197,94,.95)">Hiệp</span> 👋',
+                    desc:
+                        'Mình có <b>7+ năm kinh nghiệm</b> phát triển <b>Backend</b> (Java Spring Boot, Laravel, Node.js/NestJS) ' +
+                        'và <b>Mobile</b> (iOS Swift, React Native). Tập trung thiết kế API, tối ưu luồng nghiệp vụ, ' +
+                        'tích hợp dịch vụ (Firebase/OneSignal), và triển khai sản phẩm theo Scrum/Agile.',
+                    chip1: "🧩 Backend • iOS • React Native",
+                    chip2: "⚙️ Spring Boot • NestJS • Swift",
+                    ctaProjects: "Xem dự án",
+                    ctaEmail: "Email",
+                    ctaCv: "CV PDF",
+                    cvOld: "",
+                    cvNotice: "📄 CV PDF cập nhật lần cuối: Tháng 12/2025"
+                },
+                quick: { contact: "Thông tin liên hệ", stack: "Stack chính", tools: "Database & Tools", backend: "Backend", mobile: "Mobile" },
+                about: {
+                    title: "Giới thiệu",
+                    sub: "Gọn gàng • thực chiến • chú trọng chất lượng",
+                    p1:
+                        "Mình làm việc tốt ở cả <b>Backend</b> và <b>Mobile</b>, quen trao đổi yêu cầu với PO/Khách hàng, " +
+                        "chia nhỏ module rõ ràng, triển khai theo sprint và đảm bảo chất lượng qua review/merge theo Git flow. " +
+                        'Thế mạnh là “build ra sản phẩm chạy ổn định” và “tối ưu trải nghiệm người dùng” (đặc biệt iOS).',
+                    p2:
+                        "Mình phù hợp với team cần tăng tốc phát triển tính năng, tối ưu hệ thống, " +
+                        "hoặc cần một người có thể đảm nhiệm công việc từ API đến client."
+                },
+                skills: {
+                    title: "Kỹ năng",
+                    sub: "Core stack & công cụ sử dụng thường xuyên",
+                    tags: [
+                        "<b>Backend</b>: Java (Spring Boot)",
+                        "PHP (Laravel)",
+                        "Node.js",
+                        "NestJS",
+                        "<b>Mobile</b>: iOS (Swift)",
+                        "React Native",
+                        "<b>Web</b>: VueJS",
+                        "ReactJS",
+                        "NextJS",
+                        "<b>DB</b>: PostgreSQL",
+                        "MongoDB",
+                        "<b>Services</b>: Firebase",
+                        "OneSignal",
+                        "<b>Process</b>: Scrum • Agile",
+                        "Git • Jira • Trello"
+                    ]
+                },
+                exp: {
+                    title: "Kinh nghiệm",
+                    sub: "Timeline và các dự án tiêu biểu",
+                    items: [
+                        {
+                            role: "Knorex Viet Nam — iOS Engineer (Hợp đồng (Remote))",
+                            time: "02/2025 – 10/2025",
+                            bullets: [
+                                "Làm việc theo dạng hợp đồng trong năm 2025.",
+                                "Tham gia phát triển iOS SDK cho hệ thống bidding ads."
+                            ]
+                        },
+                        {
+                            role: "ALPHA TECH — Fullstack Developer",
+                            time: "11/2023 – 12/2024",
+                            bullets: [
+                                "Phát triển & triển khai 5+ ứng dụng web/mobile; tối ưu API backend với Node.js.",
+                                "Công nghệ: iOS (Swift), Node.js, NestJS.",
+                                "Lĩnh vực: Communication, Education."
+                            ]
+                        },
+                        {
+                            role: "TMA SOLUTIONS — Mobile Developer",
+                            time: "02/2022 – 10/2023",
+                            bullets: [
+                                "Xây dựng & cập nhật ứng dụng React Native, tích hợp OneSignal.",
+                                "Lĩnh vực: Monitoring Applications."
+                            ]
+                        },
+                        {
+                            role: "ALATKA SOLUTIONS — Fullstack Developer",
+                            time: "01/2018 – 12/2021",
+                            bullets: [
+                                "Phát triển backend e-commerce bằng Spring Boot; tham gia phân tích yêu cầu với khách hàng.",
+                                "Công nghệ: Java (Spring Boot), PHP (Laravel), iOS (Swift), Node.js.",
+                                "Lĩnh vực: Transportation, Finance, E-commerce."
+                            ]
+                        }
+                    ]
+                },
+                proj: {
+                    title: "Dự án nổi bật",
+                    sub: "Một số dự án mình đã tham gia"
+                },
+                stack: {
+                    sb_swift: "Backend (Spring Boot) • iOS (Swift)",
+                    laravel_swift: "Backend (Laravel) • iOS (Swift)",
+                    swift: "iOS (Swift)",
+                    vue: "Web (VueJS)",
+                    rn: "Mobile (React Native)",
+                    node_vue: "Backend (NodeJS) • Web (VueJS)",
+                    nest: "Backend (NestJS)",
+                    nest_react: "Backend (NestJS) • Web (ReactJS)"
+                },
+                p: {
+                    shinhan: { 1: "Xem danh sách khoản vay, thời hạn thanh toán.", 2: "Nhắc nhở đến hạn.", 3: "Triển khai và bảo trì server.", 4: "Publish lên App Store." },
+                    nhanvan: { 1: "Hệ thống phục vụ kinh doanh văn phòng phẩm." },
+                    tms: { 1: "Quản lý phân công lịch vận tải.", 2: "Quản lý tài liệu, vị trí, thời gian các chuyến/tuyến.", 3: "Triển khai và bảo trì server.", 4: "Publish lên App Store." },
+                    "3at5": { 1: "Phát triển tính năng iOS theo yêu cầu sản phẩm." },
+                    food: { 1: "Đăng món, tìm kiếm món ăn lân cận theo vị trí.", 2: "Triển khai và bảo trì server.", 3: "Publish lên App Store." },
+                    iwoofu: { 1: "Đăng & tìm kiếm dịch vụ chăm sóc thú cưng lân cận." },
+                    cyruspay: { 1: "Hỗ trợ quản lý & tính toán thuế Úc." },
+                    miguards: { 1: "Hỗ trợ lên lịch, giám sát, chấm công bảo vệ.", 2: "Tích hợp thông báo (OneSignal).", 3: "Publish lên App Store & Play Store." },
+                    vpn: { 1: "Custom hệ thống VPN dựa trên opensource WireGuard.", 2: "Publish lên App Store." },
+                    shiftbox: { 1: "Quản lý lịch học, phân công lịch, tiết học.", 2: "Triển khai và bảo trì server." },
+                    kol: { 1: "Quản lý thông tin KOLs và booking KOLs.", 2: "Triển khai và bảo trì server." },
+                    edutech: { 1: "Kết nối cổng thanh toán, hỗ trợ thanh toán học phí online trong trường học.", 2: "Triển khai và bảo trì server." },
+                    ascendx: { 1: "Custom hệ thống bidding ads dựa trên opensource Prebid." }
+                },
+                contact: {
+                    title: "Liên hệ",
+                    sub: "Open to contract / full-time",
+                    p: "<b>Muốn hợp tác?</b> Mình sẵn sàng trao đổi nếu bạn cần dev có thể làm Backend + Mobile.",
+                    email: "Email",
+                    phone: "Phone",
+                    ctaMail: "Gửi email",
+                    ctaTop: "Lên đầu trang ↑"
+                }
+            },
+
+            en: {
+                role: "Fullstack / Mobile Engineer",
+                nav: { about: "About", skills: "Skills", experience: "Experience", contact: "Contact" },
+                hero: {
+                    title: 'Hi, I’m <span style="color:rgba(34,197,94,.95)">Hiệp</span> 👋',
+                    desc:
+                        'I have <b>7+ years of experience</b> building <b>Backend</b> systems (Java Spring Boot, Laravel, Node.js/NestJS) ' +
+                        'and <b>Mobile</b> apps (iOS Swift, React Native). I focus on API design, workflow optimization, ' +
+                        'service integrations (Firebase/OneSignal), and shipping reliably with Scrum/Agile.',
+                    chip1: "🧩 Backend • iOS • React Native",
+                    chip2: "⚙️ Spring Boot • NestJS • Swift",
+                    ctaProjects: "View projects",
+                    ctaEmail: "Email",
+                    ctaCv: "CV PDF",
+                    cvOld: "",
+                    cvNotice: "📄 CV PDF last updated: December 2025"
+                },
+                quick: { contact: "Contact", stack: "Primary stack", tools: "Database & Tools", backend: "Backend", mobile: "Mobile" },
+                about: {
+                    title: "About",
+                    sub: "Practical • product-minded • quality-focused",
+                    p1:
+                        "I work across <b>Backend</b> and <b>Mobile</b>, comfortable collaborating with PO/clients, " +
+                        "breaking problems into clear modules, delivering in sprints, and maintaining quality via code reviews and Git flow. " +
+                        "My strengths are shipping stable products and optimizing user experience (especially on iOS).",
+                    p2:
+                        "I fit well in teams that need to accelerate feature delivery, optimize systems, " +
+                        "or want an engineer who can cover work from APIs to client apps."
+                },
+                skills: {
+                    title: "Skills",
+                    sub: "Core stack & tools I use frequently",
+                    tags: [
+                        "<b>Backend</b>: Java (Spring Boot)",
+                        "Node.js/NestJS",
+                        "<b>Mobile</b>: iOS (Swift)",
+                        "Flutter",
+                        "React Native",
+                        "<b>Web</b>: VueJS",
+                        "ReactJS",
+                        "<b>DB</b>: PostgreSQL",
+                        "MongoDB",
+                        "<b>Services</b>: Firebase",
+                        "OneSignal",
+                        "<b>Process</b>: Scrum • Agile",
+                        "Git • Jira • Trello"
+                    ]
+                },
+                exp: {
+                    title: "Experience",
+                    sub: "Timeline and featured projects",
+                    items: [
+                        {
+                            role: "Knorex Viet Nam — iOS Engineer (Contract (Remote))",
+                            time: "01/2025 – 10/2025",
+                            bullets: [
+                                "Contract-based work during 2025.",
+                                "Contributed to an iOS SDK for an ads bidding platform."
+                            ]
+                        },
+                        {
+                            role: "ALPHA TECH — Fullstack Developer",
+                            time: "11/2023 – 12/2024",
+                            bullets: [
+                                "Built and shipped 5+ web/mobile applications; optimized backend APIs with Node.js.",
+                                "Tech: iOS (Swift), Node.js, NestJS.",
+                                "Domains: Communication, Education."
+                            ]
+                        },
+                        {
+                            role: "TMA SOLUTIONS — Mobile Developer",
+                            time: "02/2022 – 10/2023",
+                            bullets: [
+                                "Developed and maintained a React Native app; integrated OneSignal notifications.",
+                                "Domain: Monitoring applications."
+                            ]
+                        },
+                        {
+                            role: "ALATKA SOLUTIONS — Fullstack Developer",
+                            time: "01/2018 – 12/2021",
+                            bullets: [
+                                "Developed Spring Boot backend for e-commerce; participated in requirement analysis with clients.",
+                                "Tech: Java (Spring Boot), PHP (Laravel), iOS (Swift), Node.js.",
+                                "Domains: Transportation, Finance, E-commerce."
+                            ]
+                        }
+                    ]
+                },
+                proj: {
+                    title: "Featured Projects",
+                    sub: "A selection of projects I've worked on"
+                },
+                stack: {
+                    sb_swift: "Backend (Spring Boot) • iOS (Swift)",
+                    laravel_swift: "Backend (Laravel) • iOS (Swift)",
+                    swift: "iOS (Swift)",
+                    vue: "Web (VueJS)",
+                    rn: "Mobile (React Native)",
+                    node_vue: "Backend (NodeJS) • Web (VueJS)",
+                    nest: "Backend (NestJS)",
+                    nest_react: "Backend (NestJS) • Web (ReactJS)"
+                },
+                p: {
+                    shinhan: { 1: "View loan list and repayment due dates.", 2: "Due-date reminders.", 3: "Server deployment and maintenance.", 4: "Published to App Store." },
+                    nhanvan: { 1: "Stationery retail system features." },
+                    tms: { 1: "Transport schedule assignment management.", 2: "Trip/route documents, locations, and timing management.", 3: "Server deployment and maintenance.", 4: "Published to App Store." },
+                    "3at5": { 1: "Implemented iOS features based on product requirements." },
+                    food: { 1: "Post dishes and search nearby items by location.", 2: "Server deployment and maintenance.", 3: "Published to App Store." },
+                    iwoofu: { 1: "Post and discover nearby pet care services." },
+                    cyruspay: { 1: "Supports management and Australian tax calculations." },
+                    miguards: { 1: "Scheduling, monitoring, and attendance for security guards.", 2: "Integrated notifications (OneSignal).", 3: "Published to App Store & Play Store." },
+                    vpn: { 1: "Custom VPN system based on WireGuard open-source.", 2: "Published to App Store." },
+                    shiftbox: { 1: "Class schedule and lesson/assignment management.", 2: "Server deployment and maintenance." },
+                    kol: { 1: "KOL profile and booking management.", 2: "Server deployment and maintenance." },
+                    edutech: { 1: "Payment gateway integration for online tuition payments.", 2: "Server deployment and maintenance." },
+                    ascendx: { 1: "Custom ads bidding system based on Prebid open-source." }
+                },
+                contact: {
+                    title: "Contact",
+                    sub: "Open to contract / full-time",
+                    p: "<b>Let’s work together?</b> I’m happy to chat if you need an engineer who can cover Backend + Mobile.",
+                    email: "Email",
+                    phone: "Phone",
+                    ctaMail: "Send email",
+                    ctaTop: "Back to top ↑"
+                }
+            }
+        };
+
+        // Default to EN unless user explicitly saved a preference
+        const savedLang = localStorage.getItem("lang");
+        const state = { lang: (savedLang === "vi" || savedLang === "en") ? savedLang : "en" };
+
+        const viBtn = document.getElementById("viBtn");
+        const enBtn = document.getElementById("enBtn");
+
+        function setActiveLangButtons() {
+            viBtn.classList.toggle("active", state.lang === "vi");
+            enBtn.classList.toggle("active", state.lang === "en");
+            document.documentElement.lang = state.lang === "vi" ? "vi" : "en";
+        }
+
+        function t(path) {
+            const parts = path.split(".");
+            let cur = i18n[state.lang];
+            for (const p of parts) cur = (cur && cur[p] != null) ? cur[p] : null;
+            return cur;
+        }
+
+        function applyText() {
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                const val = t(key);
+                if (val == null) return;
+                el.innerHTML = val;
+            });
+
+            // Location fixed
+            document.getElementById("chipLocation").textContent = "📍 Quy Nhơn, Gia Lai";
+
+            // Skills tags
+            const skillsEl = document.getElementById("skillsTags");
+            skillsEl.innerHTML = "";
+            (t("skills.tags") || []).forEach(tagHtml => {
+                const span = document.createElement("span");
+                span.className = "tag";
+                span.innerHTML = tagHtml;
+                skillsEl.appendChild(span);
+            });
+
+            // Timeline
+            const tl = document.getElementById("timeline");
+            tl.innerHTML = "";
+            const exp = t("exp");
+            exp.items.forEach(item => {
+                const wrap = document.createElement("div");
+                wrap.className = "item";
+
+                const top = document.createElement("div");
+                top.className = "top";
+                top.innerHTML = `<b>${item.role}</b><em>${item.time}</em>`;
+
+                const ul = document.createElement("ul");
+                item.bullets.forEach(b => {
+                    const li = document.createElement("li");
+                    li.innerHTML = b;
+                    ul.appendChild(li);
+                });
+
+                wrap.appendChild(top);
+                wrap.appendChild(ul);
+
+                tl.appendChild(wrap);
+            });
+
+            // stacks
+            document.querySelectorAll("[data-i18n^='stack.']").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                el.textContent = t(key);
+            });
+        }
+
+        function setLang(lang) {
+            state.lang = lang;
+            localStorage.setItem("lang", lang);
+            setActiveLangButtons();
+            applyText();
+        }
+
+        viBtn.addEventListener("click", () => setLang("vi"));
+        enBtn.addEventListener("click", () => setLang("en"));
+
+        // Init
+        setActiveLangButtons();
+        applyText();
+    </script>
+</body>
+
+</html>
