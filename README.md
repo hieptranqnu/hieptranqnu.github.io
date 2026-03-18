@@ -1,82 +1,108 @@
-# Hi, I'm Hiệp 👋
+<div align="center">
+  <h1>Hi, I'm Hiep Tran</h1>
+  <p><strong>Mobile & Backend Engineer</strong> focused on product delivery across iOS, Flutter, and backend systems.</p>
+  <p>
+    <a href="https://hieptranqnu.github.io/">Portfolio</a>
+    ·
+    <a href="https://linkedin.com/in/hieptranqnu">LinkedIn</a>
+    ·
+    <a href="mailto:hieptranqnu@gmail.com">Email</a>
+  </p>
+</div>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=22C55E&center=true&vCenter=true&width=500&lines=Fullstack+%2F+Mobile+Engineer;7%2B+Years+of+Experience;Backend+%E2%80%A2+iOS+%E2%80%A2+React+Native" alt="Typing SVG" />
+  <img src="https://img.shields.io/badge/iOS-Primary-0f8a61?style=for-the-badge" alt="iOS primary">
+  <img src="https://img.shields.io/badge/Flutter-Secondary-2d6cdf?style=for-the-badge" alt="Flutter secondary">
+  <img src="https://img.shields.io/badge/React%20Native-Additional-4b5563?style=for-the-badge" alt="React Native additional">
+  <img src="https://img.shields.io/badge/Node.js-Backend-111827?style=for-the-badge" alt="Node.js backend">
+  <img src="https://img.shields.io/badge/Spring%20Boot-Backend-1f6f4a?style=for-the-badge" alt="Spring Boot backend">
 </p>
 
-<p align="center">
-  <b>📍 Quy Nhon, Vietnam</b> &nbsp;|&nbsp;
-  <a href="mailto:hieptranqnu@gmail.com">✉️ Email</a> &nbsp;|&nbsp;
-  <a href="https://linkedin.com/in/hieptranqnu">🔗 LinkedIn</a>
-</p>
+## Overview
 
----
+I build mobile and backend products with an iOS-first mobile profile, followed by current Flutter product work and earlier React Native experience.
 
-## 🚀 About Me
+On the backend side, I mainly work with Node.js, Spring Boot, Java, and NestJS to support mobile and web products end to end.
 
-I have **7+ years of experience** building **Backend** systems (Java Spring Boot, Laravel, Node.js/NestJS) and **Mobile** apps (iOS Swift, React Native).
+| Focus Area | Positioning |
+| --- | --- |
+| Mobile | iOS first, Flutter second, React Native after that |
+| Backend | Node.js, Spring Boot, Java, NestJS |
+| Current direction | Mobile + Backend product delivery |
+| Public profile goal | Clear, practical, product-oriented engineering signal |
 
-- 🎯 Focus on API design and workflow optimization
-- 🔗 Service integrations (Firebase, OneSignal)
-- 📦 Ship products reliably with Scrum/Agile
-- ✅ Strengths: Building stable products & optimizing user experience (especially on iOS)
+## Current Focus
 
-I fit well in teams that need to accelerate feature delivery, optimize systems, or want an engineer who can cover work from APIs to client apps.
+| Track | Details |
+| --- | --- |
+| Current Flutter work | Building a task, calendar, and topic-based messaging product backed by Supabase |
+| Operations product work | Building a tour guide operations product for job management and work schedule coordination |
+| Primary mobile strength | iOS development with Swift |
+| Delivery style | Product-focused engineering across app behavior, APIs, and workflow-heavy features |
 
----
-
-## 🛠️ Tech Stack
-
-### Backend
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
-![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+## Core Stack
 
 ### Mobile
-![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
-![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-20232A?style=for-the-badge&logo=flutter&logoColor=61DAFB)
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-### Web
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-iOS-F97316?style=flat-square)
+![Flutter](https://img.shields.io/badge/Flutter-Mobile-0284C7?style=flat-square)
+![React Native](https://img.shields.io/badge/React%20Native-Mobile-334155?style=flat-square)
+![Kotlin](https://img.shields.io/badge/Kotlin-Basics-7C3AED?style=flat-square)
 
-### Database & Tools
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)
+### Backend
 
----
+![Node.js](https://img.shields.io/badge/Node.js-API%20and%20Product-15803D?style=flat-square)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Backend-166534?style=flat-square)
+![Java](https://img.shields.io/badge/Java-Backend-B45309?style=flat-square)
+![NestJS](https://img.shields.io/badge/NestJS-Services-B91C1C?style=flat-square)
+![Laravel](https://img.shields.io/badge/Laravel-Product%20Work-DC2626?style=flat-square)
 
-## 📫 Contact Me
+### Data and Integrations
 
-<p align="center">
-  <a href="mailto:hieptranqnu@gmail.com">
-    <img src="https://img.shields.io/badge/Email-hieptranqnu%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  <a href="https://linkedin.com/in/hieptranqnu">
-    <img src="https://img.shields.io/badge/LinkedIn-hieptranqnu-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-</p>
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Data-0F766E?style=flat-square)
+![MongoDB](https://img.shields.io/badge/MongoDB-Data-166534?style=flat-square)
+![Supabase](https://img.shields.io/badge/Supabase-Current%20Work-059669?style=flat-square)
+![Firebase](https://img.shields.io/badge/Firebase-Mobile%20Support-CA8A04?style=flat-square)
+![OneSignal](https://img.shields.io/badge/OneSignal-Notifications-1D4ED8?style=flat-square)
 
----
+## What I Do Best
 
-<p align="center">
-  <b>💼 Open to contract / full-time opportunities</b>
-</p>
+- Build mobile features that stay closely aligned with real product workflows
+- Support delivery across app behavior, APIs, integrations, and backend-connected product logic
+- Translate requirements into shippable implementation across iOS, Flutter, and backend services
+- Work effectively in teams where engineering ownership overlaps across mobile and backend boundaries
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=hieptranqnu&color=22c55e&style=for-the-badge" alt="Profile Views" />
-</p>
+## Selected Work
 
----
+### Current Product Work
 
-<p align="center">
-  <i>Let's work together? I'm happy to chat if you need an engineer who can cover Backend + Mobile.</i>
-</p>
+| Project | Scope |
+| --- | --- |
+| Task and Messaging Product | Flutter product for tasks, schedules, and topic-based user communication with Supabase as the backend |
+| Tour Guide Operations Product | Flutter product for managing jobs and coordinating work schedules |
+
+### Previous Product Experience
+
+| Company | Scope |
+| --- | --- |
+| Knorex Vietnam | Mobile SDK development for advertising products across iOS and Android using Swift and Kotlin |
+| Alpha Tech | Fullstack delivery across mobile and backend products, including iOS work and backend APIs with Node.js and NestJS |
+| TMA Solutions | React Native delivery for monitoring, scheduling, attendance, and notification-focused workflows |
+| Alatka Solutions | Backend and product delivery across finance, transportation, e-commerce, and marketplace systems using Spring Boot, Node.js, Laravel, and Swift |
+
+## Project Visibility
+
+Most company projects I have worked on are private, so this profile focuses on public-safe summaries of product scope, technical responsibilities, and delivery context rather than exposing proprietary source code.
+
+## Open To
+
+- iOS Engineer roles
+- Mobile Engineer roles with Flutter as a secondary or growing track
+- Backend Engineer roles that support mobile or product-heavy systems
+- Product teams that need hands-on ownership across both mobile and backend delivery
+
+## Connect
+
+- Portfolio: https://hieptranqnu.github.io/
+- LinkedIn: https://linkedin.com/in/hieptranqnu
+- Email: hieptranqnu@gmail.com
